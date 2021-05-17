@@ -1,0 +1,36 @@
+\documentclass[answers]{exam}
+\usepackage{amsmath}
+\title{Problem of the Day - 1}
+\date{May 16, 2021}
+
+\begin{document}
+	\maketitle
+	\begin{questions}
+		\question
+		Find the value of:
+		\begin{equation*}
+		\frac{2^{2014} + 2^{2012}}{2^{2014} - 2^{2012}}
+		\end{equation*}
+		
+		\begin{solution}
+			\begin{equation*}
+			 \frac{2^{2014} + 2^{2012}}{2^{2014} - 2^{2012}} = \frac{2^{2012}(2^2 + 1)}{2^{2012}(2^2 -1)} = \frac{5}{3}
+			\end{equation*}
+		\end{solution}
+	
+		\question
+		Give a combinatorial proof for the identity:
+		\begin{equation*}
+			{n \choose m}{m \choose r} = {n \choose r}{n \choose m-r}
+		\end{equation*}
+		
+		\begin{solution}
+			Let's say you have a set of $n$ elements, then you chose $m$ of those elements.
+			Then from those $m$ elements, you chose $r$ elements. Remember, the $r$ elements are part of the $m$ elements,
+			which is part of the $n$ elements.
+			
+			Now if we chose $r$ elements instead from the $n$ elements, we can choose $m-r$ elements to form
+			the "original subset" of $m$ elements. Thus both sides of the equation are equal.
+		\end{solution} 
+	\end{questions}
+\end{document}
