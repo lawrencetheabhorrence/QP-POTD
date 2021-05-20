@@ -1,0 +1,54 @@
+\documentclass[answers]{exam}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\title{Problem of the Day - 2}
+\date{May 18, 2021}
+
+\begin{document}
+	\maketitle
+	\begin{questions}
+		\question
+		Given that $\log_{10}^2 \approx 0.3010$, how many digits are in $5^{44}$?
+		
+		\begin{solution}
+			The number of digits of a number $x$ is $\floor*{x} + 1$ (Try it with a few examples).
+			\begin{equation*}
+			\log 5^{44} = 44 \log 5 = 44 \log (10/2) = 44(1 - 0.3010) \approx 30
+			\end{equation*}
+			Thus $5^{44}$ has 31 digits.
+		\end{solution}
+	
+		\question
+		If $60^a = 3$ and $60^b = 5$, then find $12^{\frac{1 - a - b}{2-2b}}$
+		
+		\begin{solution}
+			From the given, we can easily find a and b.
+			\begin{gather*}
+			a = \log_{60} 3 \\
+			b = \log_{60} 5 \\
+			\end{gather*}
+			Thus, evaluate the numerator and denominator of the exponent of 12.
+			\begin{gather}
+			1 - a - b = \log_{60}60 - \log_{60} 3 - \log_{60} 5 = \log_{60}(60 / 15) = \log_{60} 4 \\
+			2 - 2b = 2(1 - b) = 2\left (\log_{60}60 - \log_{60}5 \right) = 2\log_{60} 12
+			\end{gather}
+			Since these are exponents of 12, it would be better if we convert (1) and (2) to base 12. \\
+			(Remember that $12^{\log_{12}x} = x$)
+			\begin{gather*}
+			\log_{60} 4 = \frac{\log_{12} 4}{\log_{12} 60} \\
+			\log_{60} 12 = \frac{\log_{12} 12}{\log_{12} 60}
+			\end{gather*}
+			Thus,
+			\begin{equation*}
+			\frac{1 - a - b}{2 - 2b} = \frac{\log_{12} 4}{2}
+			\end{equation*}
+			Now we can evaluate the expression.
+			\begin{align*}
+			12^{\frac{1 - a - b}{2 - 2b}} &= 12^{\frac{\log_{12} 4}{2}} \\
+			&= \sqrt{12^{\log_{12} 4}} = \sqrt{4} = 2
+			\end{align*}
+		\end{solution} 
+	\end{questions}
+\end{document}
