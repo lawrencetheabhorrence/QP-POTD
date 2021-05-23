@@ -50,5 +50,24 @@
 			&= \sqrt{12^{\log_{12} 4}} = \sqrt{4} = 2
 			\end{align*}
 		\end{solution} 
+	
+		\question
+		DISCORD DM MATCH MAKING [COMBINATORICS] [COUNTING]
+		Oh hello there! Remember that post where someone met their someone on discord? Okay, let's
+		dive deeper into it. Suppose in a server, you decided to DM 5 people and every one of them replied either with a yes or a no, or sadly snobbed you and never replied like the ghosts they were. How many possible replies can you get?
+		
+		\begin{solution}
+			For this we use the mutliplication principle of coiunting : if there are n independent events, and m ways per event, then the total number of ways for all n events is m\^{}n. Therefore, since m = 3 and n = 5, the answer is 3\^{}5 or 243. 
+			
+			This can also be thought of the following: first DM, three possible replies. For the second DM, since the person involved is unique and independent of that of the first person, it is also three possible replies for the second person. Using the same assumption, same can be said for the third, fourth, and fifth. Counting, 3 x 3 x 3 x 3 x 3 = 3\^{}5 = 243. 
+			\begin{verbatim}
+				3 for the 1st person || Cumulative replies : 3
+				3 for the 2nd person || Cumulative replies : 3 x 3 = 9
+				3 for the 3rd person || Cumulative replies : 9 x 3 = 27
+				3 for the 4th person || Cumulative replies : 27 x 3 = 81
+				3 for the 5th person || Cumulative replies : 81 x 3 = 243
+			\end{verbatim}
+		\end{solution}
+		
 	\end{questions}
 \end{document}

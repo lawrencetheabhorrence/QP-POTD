@@ -1,0 +1,58 @@
+\documentclass[answers]{exam}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\title{Problem of the Day - 3}
+\date{May 23, 2021}
+\renewcommand{\solutiontitle}{\noindent\par\noindent}
+
+\begin{document}
+	\begin{questions}
+		\question
+		Given the equation
+		\begin{equation*}
+			(x^2 - 3x -2)^2 -3(x^2 -3x - 2) - 2 - x = 0
+		\end{equation*}
+		prove that the roots of the equation $x^2 - 4x - 2 = 0$ are roots of the initial equation and find all real roots of the equation.
+		
+		\begin{solution}
+			\textbf{Solution 1: } Let
+			\begin{equation*}f(x) = x^2 - 4x - 2\end{equation*}
+			and $r_1, r_2$ be the roots of $f(x)$. Thus we can express the first equation as
+			\begin{equation*}
+				(f(x) + x)^2 -3(f(x) + x) - 2 - x = 0
+			\end{equation*}
+			Substituting $r_1$ into this equation, knowing that $f(r_1) = 0$ (you can also use $r_2$).
+			\begin{equation*}
+				r_1^2 - 4r_1 - 2 = 0 \\
+			\end{equation*}
+			This implies the first equation is true if this new equation is also true. Since
+			\begin{equation*}
+				f(r_1) = r_1^2 - 4r_1 - 2 = 0
+			\end{equation*}
+			Then the first given equation must be true for $x = r_1$. This is the
+      same for $r_2$. \par
+
+      \textbf{Solution 2 (credits to n'ada):} Let
+      \begin{equation*}
+        f(x) = x^2 - 3x - 2
+      \end{equation*}
+      Thus if we can express the first equation as looking for an $x$ such that
+      \begin{equation*}
+        f(f(x)) - x = 0
+      \end{equation*}
+      From $x^2 - 4x - 2 = 0$ we have
+      \begin{gather*}
+        f(x) - x = 0 \\
+        f(x) = x
+      \end{gather*}
+      Thus
+      \begin{equation*}
+        f(f(x)) - x = f(x) - x = 0
+      \end{equation*}
+      Thus the roots to the first equation are the roots to $f(x) - x = 0$
+      which is $x^2 - 4x - 2 = 0$.
+		\end{solution}
+	\end{questions}
+\end{document}
