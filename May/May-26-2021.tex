@@ -1,0 +1,23 @@
+\documentclass[answers]{exam}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\title{Problem of the Day - 3}
+\date{May 26, 2021}
+
+\begin{document}
+	\begin{questions}
+		\question
+		Evaluate \begin{equation*}1 \cdot 1! + 2 \cdot 2! + 3 \cdot 3! + ... + n \cdot n!\end{equation*}
+		\begin{solution}
+			\begin{gather*}
+				(n+1)! = (n+1)n! = n(n!) + n! \\
+				n(n!) = (n+1)! - n! \\
+				\sum_{r=1}^{n} r \cdot (r!) = \sum_{r=1}^{n} (r+1)! - r! \\
+				= 2! - 1! + 3! - 2! + 4! - 3! + ... + (n+1)! - n! \\
+				= (n + 1)! -1
+			\end{gather*}
+		\end{solution}
+	\end{questions}
+\end{document}
