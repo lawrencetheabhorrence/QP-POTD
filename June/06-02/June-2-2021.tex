@@ -1,0 +1,43 @@
+\documentclass[answers]{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\title{Problem of the Day - 4}
+\date{June 2, 2021}
+
+\begin{document}
+	\maketitle
+	\begin{questions}
+		\question
+		In any $\triangle ABC$, $E$ and $D$ are interior points of $\overline{AC}$ and $\overline{BC}$, respectively.
+		$\overline{AF}$	bisects $\angle CAD$, and $\overline{BF}$ bisects $\angle CBE$. Prove $m\angle AEB + m\angle ADB = 2m\angle AFB$
+		\begin{solution}
+			If $\angle AEB + \angle ADB = 2\angle AFB$ then $\angle AEB = \angle ADB = \angle AFB$. Let $O$ be the intersection of $\overline{AD}$ and $\overline{BE}$. Since $\angle DAF = \angle FAE$ then $\triangle AOE$ is isosceles. Similarly, $\triangle BOD$ is also isosceles.
+			
+			Thus we have,
+			\begin{gather*}
+				\angle AEB = \angle AOE \\
+				\angle ADB = \angle BOD
+			\end{gather*}
+			Since $\angle BOD$ and $\angle AOE$ are diagonal angles, $\angle BOD = \angle AOE$.
+			Thus we have
+			\begin{equation*}
+				\angle AEB = \angle AOE = \angle BOD = \angle ADB
+			\end{equation*}
+			Now to show that $\angle AEB = \angle BOD = \angle AFB$, focus on the quadrilateral $AOBF$.
+			Note that
+			\begin{equation*}
+				\angle DAF + \angle AOE = \angle FBE + \angle BOD = 90^\circ
+			\end{equation*}
+			Since $AOBF$ is a quadrilateral...
+			\begin{gather*}
+				360^\circ = \angle DAF + \angle AOE + \angle FBE + \angle BOD + \angle DOE + \angle AFB \\
+				360^\circ = 180 + (180 - \angle AOE) + \angle AFB \\
+				\angle AOE = \angle AFB
+			\end{gather*}
+			\hfill $\blacksquare$
+		\end{solution}
+	\end{questions}
+\end{document}
